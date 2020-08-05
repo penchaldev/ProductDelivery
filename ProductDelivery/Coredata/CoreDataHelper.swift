@@ -1,39 +1,46 @@
 //
 //  CoreDataHelper.swift
-//  WeatherReport
+//  ProductDelivery
 //
-//  Created by Penchal on 30/07/20.
+//  Created by Penchal on 05/08/20.
 //  Copyright © 2020 senix.com. All rights reserved.
+//
 //
 
 import Foundation
 
-/*
+
 import CoreData
 class CoreDataHelper {
     
    //MARK: - UserData DB Operations -
     
-    class func saveDataAndUpdateData(userData:WeatherDataModel) {
+    class func saveDataAndUpdateData(userData:UserDataModel) {
         
-        let whetherInfoEntity:WeatherData!
-        let aBatch = fetchWhetherLocationData(location: userData.location!)
+        let userEntity:Customer!
+        let aBatch = fetchUserDatails()
         
         if let batchObj = aBatch {
-            whetherInfoEntity = batchObj
+            userEntity = batchObj
         }
         else {
-            whetherInfoEntity = NSEntityDescription.insertNewObject(forEntityName: String(describing: WeatherData.self), into: context) as? WeatherData
+            userEntity = NSEntityDescription.insertNewObject(forEntityName: String(describing: Customer.self), into: context) as? Customer
         }
     
-        whetherInfoEntity.location           = userData.location
-        whetherInfoEntity.temperature        = userData.temperature
-        whetherInfoEntity.weather            = userData.weather
-        whetherInfoEntity.weatherDescription = userData.weatherDescription
-        whetherInfoEntity.windSpeed          = userData.windSpeed
-        whetherInfoEntity.humidity           = userData.humidity
-        whetherInfoEntity.icon               = userData.icon
-  
+        userEntity.customerName     = userData.customerName
+        userEntity.orderID          = userData.orderID
+        userEntity.warehouseLat     = userData.warehouseLat
+        userEntity.warehouseLng     = userData.warehouseLng
+        userEntity.customerMobileNo = userData.customerMobileNo
+        userEntity.customerLat      = userData.customerLat
+        userEntity.customerLng      = userData.customerLng
+        userEntity.paymentStatus    = userData.paymentStatus
+        userEntity.deliveryMethod   = userData.deliveryMethod
+        userEntity.warehouseAddress = userData.warehouseAddress
+        userEntity.customerAddress  = userData.customerAddress
+        userEntity.trackingID       = userData.trackingID
+        userEntity.otp              = userData.otp
+        
         
         do {
             try context.save()
@@ -43,17 +50,14 @@ class CoreDataHelper {
         }
     }
     
-    //Checking if there are any duplicate locations in DB
-    class func fetchWhetherLocationData(location:String) -> WeatherData? {
+    //Checking if there are any duplicate Users data in DB
+    class func fetchUserDatails() -> Customer? {
          
-
-         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: WeatherData.self))
-         fetchRequest.predicate = NSPredicate(format: "location == %@", location)
-
+         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Customer.self))
          do {
              let resultArray = try? context.fetch(fetchRequest)
             
-              if let shiftObjs :[WeatherData] = resultArray as? [WeatherData] , shiftObjs.count > 0 {
+              if let shiftObjs :[Customer] = resultArray as? [Customer] , shiftObjs.count > 0 {
                  if shiftObjs.count > 0 {
                    return shiftObjs[0]
                  }
@@ -64,24 +68,30 @@ class CoreDataHelper {
      }
     
     //Fetching Data from DB
-    class func fetchWhetherData(location:String) -> WeatherDataModel? {
+    class func fetchUserData() -> UserDataModel? {
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: WeatherData.self))
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Customer.self))
         do {
-            guard let data = try context.fetch(fetchRequest) as? [WeatherData] else { return nil }
+            guard let data = try context.fetch(fetchRequest) as? [Customer] else { return nil }
             
-             for dataInfo in data {
-                if dataInfo.location == location {
-                    var whetherData                = WeatherDataModel()
-                    whetherData.location           = dataInfo.location
-                    whetherData.temperature        = dataInfo.temperature
-                    whetherData.weather            = dataInfo.weather
-                    whetherData.weatherDescription = dataInfo.weatherDescription
-                    whetherData.windSpeed          = dataInfo.windSpeed
-                    whetherData.humidity           = dataInfo.humidity
-                    whetherData.icon               = dataInfo.icon
-                    return whetherData
-                }
+            for dataInfo in data {
+                    var userData                = UserDataModel()
+                userData.customerName           = dataInfo.customerName
+                userData.orderID                = dataInfo.orderID
+                userData.warehouseLat           = dataInfo.warehouseLat
+                userData.warehouseLng           = dataInfo.warehouseLng
+                userData.customerMobileNo       = dataInfo.customerMobileNo
+                userData.customerLat            = dataInfo.customerLat
+                userData.customerLng            = dataInfo.customerLng
+                userData.paymentStatus          = dataInfo.paymentStatus
+                userData.deliveryMethod         = dataInfo.deliveryMethod
+                userData.warehouseAddress       = dataInfo.warehouseAddress
+                userData.customerAddress        = dataInfo.customerAddress
+                userData.trackingID             = dataInfo.trackingID
+                userData.otp                    = dataInfo.otp
+                
+                return userData
+                
             }
             return nil
         }
@@ -92,9 +102,9 @@ class CoreDataHelper {
     }
     
     //Delete data from DB
-    class func deleteAllWhetherData() {
+    class func deleteAllUserData() {
          
-         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: WeatherData.self))
+         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Customer.self))
          let deleteBatchRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
          
          do {
@@ -108,4 +118,3 @@ class CoreDataHelper {
 }
 
  
-*/

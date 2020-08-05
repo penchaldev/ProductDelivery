@@ -35,13 +35,30 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserDetailsCell" rowHeight="116" id="vGe-ys-5bp" customClass="UserDetailsTableViewCell" customModule="ProductDelivery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="116"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserDetailsCell" rowHeight="98" id="vGe-ys-5bp" customClass="UserDetailsTableViewCell" customModule="ProductDelivery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vGe-ys-5bp" id="RLh-VI-p7E">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glP-Xp-p4v">
+                                                    <rect key="frame" x="20" y="11" width="374" height="76"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="glP-Xp-p4v" firstAttribute="leading" secondItem="RLh-VI-p7E" secondAttribute="leadingMargin" id="Yan-w3-nzu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="glP-Xp-p4v" secondAttribute="trailing" id="YdB-5k-xR6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="glP-Xp-p4v" secondAttribute="bottom" id="a0h-BO-VJa"/>
+                                                <constraint firstItem="glP-Xp-p4v" firstAttribute="top" secondItem="RLh-VI-p7E" secondAttribute="topMargin" id="sq0-rV-3Le"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userDetailsLabel" destination="glP-Xp-p4v" id="d9U-OT-buK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

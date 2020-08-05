@@ -1,5 +1,5 @@
 //
-//  DeliveryDetailsModel.swift
+//  UserDetailsModel.swift
 //  ProductDelivery
 //
 //  Created by Penchal on 05/08/20.
@@ -9,8 +9,8 @@
 
 import Foundation
 
-// MARK: - DeliveryDetails
-struct DeliveryDetails: Codable {
+// MARK: - UserDetails
+struct UserDetails: Codable {
     let message: String
     let requestID: Int
     let order: Order
@@ -58,4 +58,23 @@ struct Order: Codable {
         case currentProviderID = "current_provider_id"
         case id
     }
+}
+
+//MARK: - CoreData Model
+
+struct UserDataModel {
+    
+    var customerName:String?
+    var orderID:String?
+    var warehouseLat:String?
+    var warehouseLng:String?
+    var customerMobileNo:String?
+    var customerLat:String?
+    var customerLng:String?
+    var paymentStatus:String?
+    var deliveryMethod:String?
+    var warehouseAddress:String?
+    var customerAddress:String?
+    var trackingID:String?
+    var otp:String?
 }

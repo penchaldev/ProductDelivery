@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1C48F0A24DACFFA00DA9C95 /* Customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C48F0824DACFFA00DA9C95 /* Customer+CoreDataClass.swift */; };
+		B1C48F0B24DACFFA00DA9C95 /* Customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C48F0924DACFFA00DA9C95 /* Customer+CoreDataProperties.swift */; };
 		B1DEB39C24DA534A00A400AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB39B24DA534A00A400AD /* AppDelegate.swift */; };
 		B1DEB39E24DA534A00A400AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB39D24DA534A00A400AD /* SceneDelegate.swift */; };
 		B1DEB3A024DA534A00A400AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB39F24DA534A00A400AD /* ViewController.swift */; };
@@ -17,7 +19,7 @@
 		B1DEB3B624DA535200A400AD /* ProductDeliveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3B524DA535200A400AD /* ProductDeliveryTests.swift */; };
 		B1DEB3C124DA535200A400AD /* ProductDeliveryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3C024DA535200A400AD /* ProductDeliveryUITests.swift */; };
 		B1DEB3CF24DA542F00A400AD /* PDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3CE24DA542F00A400AD /* PDConstants.swift */; };
-		B1DEB3D124DA566D00A400AD /* DeliveryDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3D024DA566D00A400AD /* DeliveryDetailsModel.swift */; };
+		B1DEB3D124DA566D00A400AD /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3D024DA566D00A400AD /* UserDetailsModel.swift */; };
 		B1DEB3D324DA5A1900A400AD /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3D224DA5A1900A400AD /* UserDetailsViewController.swift */; };
 		B1DEB3D524DA5ABA00A400AD /* UserDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3D424DA5ABA00A400AD /* UserDetailsTableViewCell.swift */; };
 		B1DEB3D724DA72B900A400AD /* PDNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3D624DA72B900A400AD /* PDNetworkManager.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1C48F0824DACFFA00DA9C95 /* Customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Customer+CoreDataClass.swift"; path = "ProductDelivery/Coredata/Entitys/Customer+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B1C48F0924DACFFA00DA9C95 /* Customer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Customer+CoreDataProperties.swift"; path = "ProductDelivery/Coredata/Entitys/Customer+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B1DEB39824DA534A00A400AD /* ProductDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1DEB39B24DA534A00A400AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1DEB39D24DA534A00A400AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +66,7 @@
 		B1DEB3C024DA535200A400AD /* ProductDeliveryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDeliveryUITests.swift; sourceTree = "<group>"; };
 		B1DEB3C224DA535200A400AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1DEB3CE24DA542F00A400AD /* PDConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDConstants.swift; sourceTree = "<group>"; };
-		B1DEB3D024DA566D00A400AD /* DeliveryDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailsModel.swift; sourceTree = "<group>"; };
+		B1DEB3D024DA566D00A400AD /* UserDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
 		B1DEB3D224DA5A1900A400AD /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		B1DEB3D424DA5ABA00A400AD /* UserDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		B1DEB3D624DA72B900A400AD /* PDNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDNetworkManager.swift; sourceTree = "<group>"; };
@@ -98,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1C48F0724DACFBA00DA9C95 /* Entitys */ = {
+			isa = PBXGroup;
+			children = (
+				B1C48F0824DACFFA00DA9C95 /* Customer+CoreDataClass.swift */,
+				B1C48F0924DACFFA00DA9C95 /* Customer+CoreDataProperties.swift */,
+			);
+			path = Entitys;
+			sourceTree = "<group>";
+		};
 		B1DEB38F24DA534900A400AD = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +180,7 @@
 		B1DEB3DC24DA73ED00A400AD /* Coredata */ = {
 			isa = PBXGroup;
 			children = (
+				B1C48F0724DACFBA00DA9C95 /* Entitys */,
 				B1DEB3DF24DA74AF00A400AD /* CoreDataHelper.swift */,
 			);
 			path = Coredata;
@@ -175,7 +189,7 @@
 		B1DEB3DD24DA743800A400AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B1DEB3D024DA566D00A400AD /* DeliveryDetailsModel.swift */,
+				B1DEB3D024DA566D00A400AD /* UserDetailsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,16 +346,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C48F0A24DACFFA00DA9C95 /* Customer+CoreDataClass.swift in Sources */,
 				B1DEB3E724DA762F00A400AD /* ActivityIndicatorViewStyle.swift in Sources */,
 				B1DEB3CF24DA542F00A400AD /* PDConstants.swift in Sources */,
 				B1DEB3D524DA5ABA00A400AD /* UserDetailsTableViewCell.swift in Sources */,
 				B1DEB3E324DA75AE00A400AD /* ViewUtils.swift in Sources */,
 				B1DEB3D724DA72B900A400AD /* PDNetworkManager.swift in Sources */,
 				B1DEB3A024DA534A00A400AD /* ViewController.swift in Sources */,
-				B1DEB3D124DA566D00A400AD /* DeliveryDetailsModel.swift in Sources */,
+				B1DEB3D124DA566D00A400AD /* UserDetailsModel.swift in Sources */,
 				B1DEB3A624DA534A00A400AD /* ProductDelivery.xcdatamodeld in Sources */,
 				B1DEB3D324DA5A1900A400AD /* UserDetailsViewController.swift in Sources */,
 				B1DEB39C24DA534A00A400AD /* AppDelegate.swift in Sources */,
+				B1C48F0B24DACFFA00DA9C95 /* Customer+CoreDataProperties.swift in Sources */,
 				B1DEB3E024DA74AF00A400AD /* CoreDataHelper.swift in Sources */,
 				B1DEB3D924DA736100A400AD /* Reachability.swift in Sources */,
 				B1DEB3E524DA760D00A400AD /* ActivityIndicatorView.swift in Sources */,

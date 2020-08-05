@@ -12,9 +12,9 @@ import Foundation
 import UIKit
 
 
-class WRNetworkManager: NSObject,URLSessionDelegate {
+class PDNetworkManager: NSObject,URLSessionDelegate {
 
-    static let sharedInstance = WRNetworkManager()
+    static let sharedInstance = PDNetworkManager()
     
     // Configuration
     static var task: URLSessionTask?
@@ -31,7 +31,7 @@ class WRNetworkManager: NSObject,URLSessionDelegate {
     
  //MARK: - Get SERVICE CALL -
     
-static func getServiceCall(completionHandler:@escaping(DeliveryDetails) -> Void){
+static func getServiceCall(completionHandler:@escaping(UserDetails) -> Void){
     
     if !Reachability.isConnectedToNetwork() {
         DispatchQueue.main.async {
@@ -58,8 +58,8 @@ static func getServiceCall(completionHandler:@escaping(DeliveryDetails) -> Void)
                 case .success:
                     if let data = responseData, let _ = String(data: data, encoding: .utf8) {
                         do {
-                          let weatherResponse = try JSONDecoder().decode(DeliveryDetails.self, from: data)
-                            print(weatherResponse)
+                          let weatherResponse = try JSONDecoder().decode(UserDetails.self, from: data)
+//                            print(weatherResponse)
                             
                             DispatchQueue.main.async {
                                 completionHandler(weatherResponse)

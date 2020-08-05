@@ -14,9 +14,9 @@ class UserDetailsViewController: UIViewController,UITableViewDelegate,UITableVie
   
     @IBOutlet weak var userDetailsTableView: UITableView!
     
+    var responseData: UserDetails?
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
 
@@ -28,6 +28,8 @@ class UserDetailsViewController: UIViewController,UITableViewDelegate,UITableVie
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier:tableCell) as! UserDetailsTableViewCell
+            
+            cell.userDetailsLabel.text = responseData?.order.customerName ?? "Name not availabel"
         
             return cell
         }

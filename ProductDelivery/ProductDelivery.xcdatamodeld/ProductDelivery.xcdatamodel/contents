@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Customer" representedClassName="Customer" syncable="YES">
+        <attribute name="customerAddress" optional="YES" attributeType="String"/>
+        <attribute name="customerLat" optional="YES" attributeType="String"/>
+        <attribute name="customerLng" optional="YES" attributeType="String"/>
+        <attribute name="customerMobileNo" optional="YES" attributeType="String"/>
+        <attribute name="customerName" optional="YES" attributeType="String"/>
+        <attribute name="deliveryMethod" optional="YES" attributeType="String"/>
+        <attribute name="orderID" optional="YES" attributeType="String"/>
+        <attribute name="otp" optional="YES" attributeType="String"/>
+        <attribute name="paymentStatus" optional="YES" attributeType="String"/>
+        <attribute name="trackingID" optional="YES" attributeType="String"/>
+        <attribute name="warehouseAddress" optional="YES" attributeType="String"/>
+        <attribute name="warehouseLat" optional="YES" attributeType="String"/>
+        <attribute name="warehouseLng" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Customer" positionX="-63" positionY="-18" width="128" height="238"/>
+    </elements>
 </model>

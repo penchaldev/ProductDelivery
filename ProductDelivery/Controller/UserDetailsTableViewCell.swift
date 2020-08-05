@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
 class UserDetailsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var userDetailsLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +22,4 @@ class UserDetailsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
