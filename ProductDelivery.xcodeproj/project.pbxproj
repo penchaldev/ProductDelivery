@@ -16,6 +16,16 @@
 		B1DEB3AB24DA535200A400AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1DEB3A924DA535200A400AD /* LaunchScreen.storyboard */; };
 		B1DEB3B624DA535200A400AD /* ProductDeliveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3B524DA535200A400AD /* ProductDeliveryTests.swift */; };
 		B1DEB3C124DA535200A400AD /* ProductDeliveryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3C024DA535200A400AD /* ProductDeliveryUITests.swift */; };
+		B1DEB3CF24DA542F00A400AD /* PDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3CE24DA542F00A400AD /* PDConstants.swift */; };
+		B1DEB3D124DA566D00A400AD /* DeliveryDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3D024DA566D00A400AD /* DeliveryDetailsModel.swift */; };
+		B1DEB3D324DA5A1900A400AD /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3D224DA5A1900A400AD /* UserDetailsViewController.swift */; };
+		B1DEB3D524DA5ABA00A400AD /* UserDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3D424DA5ABA00A400AD /* UserDetailsTableViewCell.swift */; };
+		B1DEB3D724DA72B900A400AD /* PDNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3D624DA72B900A400AD /* PDNetworkManager.swift */; };
+		B1DEB3D924DA736100A400AD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3D824DA736100A400AD /* Reachability.swift */; };
+		B1DEB3E024DA74AF00A400AD /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3DF24DA74AF00A400AD /* CoreDataHelper.swift */; };
+		B1DEB3E324DA75AE00A400AD /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3E224DA75AE00A400AD /* ViewUtils.swift */; };
+		B1DEB3E524DA760D00A400AD /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3E424DA760D00A400AD /* ActivityIndicatorView.swift */; };
+		B1DEB3E724DA762F00A400AD /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEB3E624DA762F00A400AD /* ActivityIndicatorViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +61,16 @@
 		B1DEB3BC24DA535200A400AD /* ProductDeliveryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductDeliveryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1DEB3C024DA535200A400AD /* ProductDeliveryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDeliveryUITests.swift; sourceTree = "<group>"; };
 		B1DEB3C224DA535200A400AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1DEB3CE24DA542F00A400AD /* PDConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDConstants.swift; sourceTree = "<group>"; };
+		B1DEB3D024DA566D00A400AD /* DeliveryDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailsModel.swift; sourceTree = "<group>"; };
+		B1DEB3D224DA5A1900A400AD /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		B1DEB3D424DA5ABA00A400AD /* UserDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		B1DEB3D624DA72B900A400AD /* PDNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDNetworkManager.swift; sourceTree = "<group>"; };
+		B1DEB3D824DA736100A400AD /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B1DEB3DF24DA74AF00A400AD /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		B1DEB3E224DA75AE00A400AD /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		B1DEB3E424DA760D00A400AD /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		B1DEB3E624DA762F00A400AD /* ActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +123,13 @@
 			children = (
 				B1DEB39B24DA534A00A400AD /* AppDelegate.swift */,
 				B1DEB39D24DA534A00A400AD /* SceneDelegate.swift */,
-				B1DEB39F24DA534A00A400AD /* ViewController.swift */,
-				B1DEB3A124DA534A00A400AD /* Main.storyboard */,
+				B1DEB3DD24DA743800A400AD /* Model */,
+				B1DEB3DE24DA746100A400AD /* Controller */,
+				B1DEB3DB24DA739C00A400AD /* APIManager */,
+				B1DEB3DC24DA73ED00A400AD /* Coredata */,
+				B1DEB3CE24DA542F00A400AD /* PDConstants.swift */,
 				B1DEB3A724DA535200A400AD /* Assets.xcassets */,
+				B1DEB3A124DA534A00A400AD /* Main.storyboard */,
 				B1DEB3A924DA535200A400AD /* LaunchScreen.storyboard */,
 				B1DEB3AC24DA535200A400AD /* Info.plist */,
 				B1DEB3A424DA534A00A400AD /* ProductDelivery.xcdatamodeld */,
@@ -129,6 +153,52 @@
 				B1DEB3C224DA535200A400AD /* Info.plist */,
 			);
 			path = ProductDeliveryUITests;
+			sourceTree = "<group>";
+		};
+		B1DEB3DB24DA739C00A400AD /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				B1DEB3D624DA72B900A400AD /* PDNetworkManager.swift */,
+				B1DEB3D824DA736100A400AD /* Reachability.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		B1DEB3DC24DA73ED00A400AD /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				B1DEB3DF24DA74AF00A400AD /* CoreDataHelper.swift */,
+			);
+			path = Coredata;
+			sourceTree = "<group>";
+		};
+		B1DEB3DD24DA743800A400AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1DEB3D024DA566D00A400AD /* DeliveryDetailsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B1DEB3DE24DA746100A400AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B1DEB39F24DA534A00A400AD /* ViewController.swift */,
+				B1DEB3D224DA5A1900A400AD /* UserDetailsViewController.swift */,
+				B1DEB3D424DA5ABA00A400AD /* UserDetailsTableViewCell.swift */,
+				B1DEB3E124DA755000A400AD /* Helper */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B1DEB3E124DA755000A400AD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B1DEB3E224DA75AE00A400AD /* ViewUtils.swift */,
+				B1DEB3E424DA760D00A400AD /* ActivityIndicatorView.swift */,
+				B1DEB3E624DA762F00A400AD /* ActivityIndicatorViewStyle.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1DEB3E724DA762F00A400AD /* ActivityIndicatorViewStyle.swift in Sources */,
+				B1DEB3CF24DA542F00A400AD /* PDConstants.swift in Sources */,
+				B1DEB3D524DA5ABA00A400AD /* UserDetailsTableViewCell.swift in Sources */,
+				B1DEB3E324DA75AE00A400AD /* ViewUtils.swift in Sources */,
+				B1DEB3D724DA72B900A400AD /* PDNetworkManager.swift in Sources */,
 				B1DEB3A024DA534A00A400AD /* ViewController.swift in Sources */,
+				B1DEB3D124DA566D00A400AD /* DeliveryDetailsModel.swift in Sources */,
 				B1DEB3A624DA534A00A400AD /* ProductDelivery.xcdatamodeld in Sources */,
+				B1DEB3D324DA5A1900A400AD /* UserDetailsViewController.swift in Sources */,
 				B1DEB39C24DA534A00A400AD /* AppDelegate.swift in Sources */,
+				B1DEB3E024DA74AF00A400AD /* CoreDataHelper.swift in Sources */,
+				B1DEB3D924DA736100A400AD /* Reachability.swift in Sources */,
+				B1DEB3E524DA760D00A400AD /* ActivityIndicatorView.swift in Sources */,
 				B1DEB39E24DA534A00A400AD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
