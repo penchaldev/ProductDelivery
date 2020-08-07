@@ -131,7 +131,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
             let resJson = JSON(responseObject.result)
             print(responseObject)
-            //We are Getting Error :  "error_message" = "This API project is not authorized to use this API."
+            //We are Getting Error here:  "error_message" = "This API project is not authorized to use this API."
             self.showAlert(message: "This API project is not authorized to use this API.", title: "PolylineOnMap")
             return
             
