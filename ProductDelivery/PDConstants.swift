@@ -23,7 +23,7 @@ let tableCell = "UserDetailsCell"
 
 //MARK: - Storyboard IDs -
 
-let keyDetailReportVC = "DetailedReport"
+let keyUserDetailsVC = "UserDetailsViewController"
 
 //MARK: - Alert Messages -
 

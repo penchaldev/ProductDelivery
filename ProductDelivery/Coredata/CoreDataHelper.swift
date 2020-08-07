@@ -101,7 +101,7 @@ class CoreDataHelper {
         }
     }
     
-    //Delete data from DB
+    //Deleting data from DB
     class func deleteAllUserData() {
          
          let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Customer.self))

@@ -79,6 +79,54 @@ static func getServiceCall(completionHandler:@escaping(UserDetails) -> Void){
         task?.resume()
     }
 }
+    
+    static func getMapServiceCall(baseUrl:String,completionHandler:@escaping(_ data:Data) -> Void) {
+        
+        if !Reachability.isConnectedToNetwork() {
+            DispatchQueue.main.async {
+                let keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow })
+                keyWindow?.rootViewController?.showAlert(message: keyNetConnect, title: keyError)
+            }
+            return
+        }
+        
+        DispatchQueue.global(qos:.userInitiated).async {
+            var request =  URLRequest(url: URL(string:baseUrl)!)
+            request.httpMethod = HTTPMethod.get.rawValue
+            
+            var headers = request.allHTTPHeaderFields ?? [:]
+            headers["Content-Type"] = "application/json"
+            request.allHTTPHeaderFields = headers
+            print("Final Request:::",request)
+            
+            task = session.dataTask(with: request, completionHandler: { (responseData, response, responseError) in
+                if let response = response as? HTTPURLResponse {
+                    let result = self.handleNetworkResponse(response)
+                    switch result {
+                    case .success:
+                        if let data = responseData, let _ = String(data: data, encoding: .utf8) {
+                            do {
+                                let weatherResponse = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+    //                            print(weatherResponse)
+                                
+                                DispatchQueue.main.async {
+                                    completionHandler(data)
+                                }
+                            }
+                            catch let error {
+                                print("Parsing Error:\(error)")
+                            }
+                        }
+                    case .unautherized:
+                        return
+                    case .failure(_):
+                        return
+                    }
+                }
+            })
+            task?.resume()
+        }
+    }
 
  static func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String> {
     switch response.statusCode {
